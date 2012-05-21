@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en=us">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="/javascripts/layout.js"></script>
+  <title><%= @page_title %></title>
+</head>
+<body>
+  <div id="flash">
+    <% if flash[:notice] %>
+      <p class="notice"><%= flash[:notice] %><span class="close"></span></p>
+    <% end %>
+    <% if flash[:alert] %>
+      <p class="alert"><%= flash[:alert] %><span class="close"></span></p>
+    <% end %>
+  </div>
+  <%= yield %>
+</body>
+</html>
